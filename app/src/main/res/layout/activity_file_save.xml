@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ie.spiddalsoftware.gearoid.eventtimer.FileSaveActivity">
+
+    <TextView
+        android:id="@+id/filetitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/filename_heading"/>
+
+    <EditText
+        android:id="@+id/filename_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filetitle"
+        android:text="timing file"/>
+
+    <Button
+        android:id="@+id/filesave_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignRight="@id/filename_edit"
+        android:text="@string/filesave_btn_caption"
+        android:onClick="writeToFile"
+        />
+    <TextView
+        android:id="@+id/file_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filename_edit"
+        android:text="@string/file_instructions"/>
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/file_instruction"/>
+
+    <TextView
+        android:id="@+id/whilesaving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space"
+        android:text="@string/before_filesave"/>
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/whilesaving"/>
+
+    <TextView
+        android:id="@+id/deleteinstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space2"
+        android:text="@string/blank"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deleteinstructions"
+        android:layout_margin="20dp"
+        android:text="@string/delete_btn_caption"
+        android:onClick="deleteDatabase"
+        android:clickable="false"
+        android:enabled="false"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/notdelete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deleteinstructions"
+        android:layout_toRightOf="@id/delete_btn"
+        android:layout_margin="20dp"
+        android:text="@string/notDel_btn_caption"
+        android:onClick="exitActivity"
+        android:visibility="visible"
+        android:enabled="false" />
+
+</RelativeLayout>

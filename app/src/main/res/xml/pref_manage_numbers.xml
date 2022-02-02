@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="manage_pref"
+        android:summary="Allow this App to manage entry numbers"
+        android:title="Manage entry numbers" />
+
+    <EditTextPreference
+        android:key="max_number_pref"
+        android:dependency="manage_pref"
+        android:title="@string/pref_maxNumber_title"
+        android:inputType="number"
+        android:defaultValue="@string/pref_maxNumber_default"/>
+
+    <SwitchPreference
+        android:key="outOfRange_pref"
+        android:dependency="manage_pref"
+        android:title="Out of range number entry"
+        android:summary="Accept Out Of Range (OOR) numbers"
+        android:defaultValue="true"/>
+
+    <SwitchPreference
+        android:key="duplicate_pref"
+        android:dependency="manage_pref"
+        android:title="Duplicate Entries"
+        android:summary="Accept duplicate entries"
+        android:defaultValue="false"/>
+
+
+
+</PreferenceScreen>

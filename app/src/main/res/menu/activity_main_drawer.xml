@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_enter"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="@string/title_menu_enter" />
+        <item
+            android:id="@+id/menu_dbase"
+            android:icon="@drawable/ic_reorder_24dp"
+            android:title="@string/menu_dbase_text" />
+        <item
+            android:id="@+id/menu_save"
+            android:icon="@drawable/ic_save_24dp"
+            android:title="@string/menu_export_text" />
+        <item
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/ic_more_vert_24dp"
+            android:title="@string/nemu_settings" />
+    </group>
+
+    <item android:title="@string/MenuSecondTitle">
+        <menu>
+            <item
+                android:id="@+id/menu_instruction"
+                android:icon="@drawable/ic_help_24dp"
+                android:title="@string/menu_help_text" />
+            <item
+                android:id="@+id/menu_about"
+                android:icon="@drawable/ic_info_24dp"
+                android:title="@string/menu_about_title" />
+        </menu>
+    </item>
+
+</menu>

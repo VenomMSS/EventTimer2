@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="classify_pref"
+        android:title="Classify vehicles"
+        android:summary="Allow this App to classify entries"
+        android:defaultValue="true"/>
+
+    <ListPreference
+        android:key="classify_age_pref"
+        android:dependency="classify_pref"
+        android:title="@string/pref_classifyAge_title"
+        android:entries="@array/pref_classify_age_titles"
+        android:entryValues="@array/pref_classify_age_values"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:defaultValue="-1"/>
+
+    <ListPreference
+        android:key="classify_size_pref"
+        android:dependency="classify_pref"
+        android:title="@string/pref_classifySize_title"
+        android:entries="@array/pref_classify_size_titles"
+        android:entryValues="@array/pref_classify_size_values"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:defaultValue="-1"/>
+
+
+
+</PreferenceScreen>
